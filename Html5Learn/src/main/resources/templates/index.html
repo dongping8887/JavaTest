@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>林权-人行版</title>
+</head>
+<body>
+
+<script type="application/javascript">
+    var video1 = document.getElementById("video1");
+    function playPause() {
+        if (video1.paused){
+            video1.play()
+        }else{
+            video1.pause()
+        }
+    }
+</script>
+
+
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+
+<!--<span th:text="'Welcome to our application, ' + ${user.name} + '!'">-->
+
+<form th:action="@{/logout}" method="post">
+    <!--<input type="submit" value="注销111"/>-->
+
+    <input type="submit" value="注销"/>
+</form>
+</body>
+</html>

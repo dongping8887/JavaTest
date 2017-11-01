@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+
+<div style="text-content: center;">
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+
+</div>
+<video id="video1" width="320" height="240" controls="controls">
+    <source src="assets/20150630_102112.mp4" type="video/mp4"/>
+    Your browser does not support the video tag.
+</video>
+
+
+<script type="application/javascript">
+    var video1 = document.getElementById("video1");
+    function playPause() {
+        if (video1.paused){
+            video1.play()
+        }else{
+            video1.pause()
+        }
+    }
+
+    function makeBig() {
+        video1.width=640;
+    }
+
+    function makeSmall() {
+        video1.width=160;
+    }
+
+    function makeNormal() {
+        video1.width=320;
+    }
+</script>
+</body>
+</html>
